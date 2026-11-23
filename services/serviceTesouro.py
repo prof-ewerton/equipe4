@@ -14,7 +14,7 @@ class Service:
         tesouro.nome = nome.strip()
         tesouro.valor = valor.strip()
         tesouro.encontrado = False
-        tesouro.raridade raridade.strip()
+        tesouro.raridade = raridade.strip()
         tesouro.id = self.repositoryTesouro.create(tesouro)
         
         return tesouro
