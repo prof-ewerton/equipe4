@@ -16,9 +16,6 @@ def install():
             connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
             (navio.nome, navio.capacidade, navio.emViagem, navio.tipoNavio))
         
-    
-        connection.commit()
-
     finally:
         connection.close()
         
@@ -45,6 +42,18 @@ def install():
     finally:
         connection.close()
 
+    try:
+        connection.execute("""CREATE TABLE IF NOT EXISTS tesouro (id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL, valor INTEGER NOT NULL, encontrado BOOLEAN NOT NULL DEFAULT 0, raridade TEXT NOT NULL)""")
+        respostaTesouro = connection.execute("SELECT COUNT (*) FROM tesouro")
+        resultadoTesouro = resposta.fetchall()[0]
+        if resultadoTesouro == 0:
+            connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""",
+            (tesouro.nome, tesouro.valor, tesouro.encontrado, tesouro.raridade))
+    
+        connection.commit()
+    finally:
+        connection.close()
 
 if __name__ == "__main__":
     install()
