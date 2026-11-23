@@ -49,4 +49,16 @@ class Ui:
         
     def menu_entity_three(self):
         print("\n===== TEMA DA EQUIPE =====")
-        print("= tema do estudante ==")
+        print("= tesouro ==")
+        while True:
+            print("sair: 0 | cadastrar tesouro: 1")
+            escolha = input("Escolha o que fazer: ")
+            if escolha.strip() == "0":
+                print("encerrando")
+                break
+            elif escolha.strip() == "1":
+                nome = input("nome do tesouro: ")
+                valor = int(input("valor do tesouro: "))
+                raridade = input("raridade do tesouro: ")
+                
+        
