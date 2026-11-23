@@ -1,4 +1,4 @@
-class sobrevivente(self, id = None, nome = None, idade = None, infectado = False, habilidade = None):
+class Sobrevivente(self, id = None, nome = None, idade = None, infectado = False, habilidade = None):
     self.id = id
     self.nome = nome
     self.idade = idade
