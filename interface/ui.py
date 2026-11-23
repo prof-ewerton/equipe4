@@ -52,6 +52,7 @@ class Ui:
                 
                 criar = services.create(nome, idade, habilidade)
                 print(f"Sobrevivente cadastrado! ID: {criar_id}")
+                break
         
     def menu_entity_two(self):
         print("\n===== TEMA DA EQUIPE =====")
