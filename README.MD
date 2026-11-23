@@ -1,8 +1,9 @@
 # **Requisitos da avaliação prática**
 
 ## temas das entidades:
-### entidade sobrevivente nome (String) idade(int) infectado(boolean) e habilidade(string) - João
-### entidade tesouro nome (string) valor (integer) encontrado (boolean) raridade (string) - Gustavo
+### João - entidade sobrevivente nome (String) idade(int) infectado(boolean) e habilidade(string)
+### Gustavo - entidade tesouro nome (string) valor (integer) encontrado (boolean) raridade (string)
+### Letícia - Navio  nome (string), capacidade (integer) emViagem (boolean) tipoNavio (string)
 
 ## **Primeiro dia**
 
@@ -31,5 +32,3 @@ A funcionalidade deverá:
 6. Validar se o atributo string não está vazio ou preenchido apenas com espaços.
 7. Validar se o valor digitado para o atributo de categoria corresponde exatamente a uma das três opções permitidas, rejeitando valores incorretos ou com erros de digitação.
 8. Persistir o registro no banco de dados e informar ao usuário se o cadastro foi realizado com sucesso.
-
-Letícia - Navio  nome (string), capacidade (integer) emViagem (boolean) tipoNavio (string)
