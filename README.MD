@@ -2,6 +2,7 @@
 
 ## temas das entidades:
 ### entidade sobrevivente nome (String) idade(int) infectado(boolean) e habilidade(string) - João
+### entidade tesouro nome (string) valor (integer) encontrado (boolean) raridade (string) - Gustavo
 
 ## **Primeiro dia**
 
