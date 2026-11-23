@@ -14,8 +14,16 @@ def install():
         
         if resultado == 0:
             connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
-            (navio.nome, navio.capacidade, navio.emViagem, navio.tipoNavio))
-        
+            ("sereia", 2000, True,"cargueiro"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("concha do mar", 300, False,"Passeio"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("amélia", 600, False,"Passeio"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("destruidor de ondas", 2000, True,"cargueiro"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("summer", 350, True,"Passeio"))
+            
     finally:
         connection.close()
         
