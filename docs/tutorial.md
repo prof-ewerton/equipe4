@@ -843,4 +843,4 @@ Antes de concluir uma operação com o banco de dados, confira:
 - Os resultados foram verificados antes de acessar seus campos?
 - A conexão foi fechada ao final da operação?
 
-**Dica:** durante o desenvolvimento, não ignore as mensagens de erro do Python e do SQLite. Elas geralmente indicam o tipo de problema e ajudam a localizar a linha em que ele ocorreu.
+**Dica:** durante o desenvolvimento, não ignore as mensagens de erro do Python e do SQLite. Elas geralmente indicam o tipo de problema e ajudam a localizar a linha em que ele ocorreu.'
