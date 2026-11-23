@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 from connection import get_db_connection()
 
-=======
 from database.connection import get_db_connection
 
 def install():
@@ -28,4 +26,3 @@ def install():
 if __name__ == "__main__":
     install()
     print("Banco de dados instalado com sucesso.")
->>>>>>> leticiaguardiolaabreus/install
