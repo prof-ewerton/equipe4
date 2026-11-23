@@ -50,6 +50,12 @@ def install():
         if resultadoTesouro == 0:
             connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""",
             (tesouro.nome, tesouro.valor, tesouro.encontrado, tesouro.raridade))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de madeira', 500 , False , 'pouco raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de ferro', 600 , False , 'medio raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de cobre', 700 , False , 'bastante raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de ouro', 800 , False , 'muito raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de diamante', 900 , False , 'extremamente raro'))
+        
     
         connection.commit()
     finally:
