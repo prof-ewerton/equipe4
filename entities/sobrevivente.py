@@ -1,4 +1,4 @@
-class Sobrevivente
+class Sobrevivente:
     def __init__(self, id = None, nome = None, idade = None, infectado = False, habilidade = None):
         self.id = id
         self.nome = nome
