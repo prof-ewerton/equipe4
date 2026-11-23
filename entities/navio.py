@@ -4,3 +4,4 @@ class Navio:
         self.nome = nome
         self.capacidade = capacidade
         self.emViagem = emViagem
+        self.tipoNavio = tipoNavio
