@@ -12,6 +12,8 @@ class CRUDnavio:
             
             connection.commit()
             
-            return cursor.lastrowid
+            
         finally:
             connection.close()
+        
+        return cursor.lastrowid
