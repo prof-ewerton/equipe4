@@ -21,6 +21,23 @@ def install():
 
     finally:
         connection.close()
+        
+    try:
+        connection.execute("""CREATE TABLE IF NOT EXISTS sobrevivente (id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL, idade INTEGER NOT NULL, infectado BOOLEAN NOT NULL DEFAULT 0, habilidade TEXT NOT NULL)""")
+        
+        resposta = connection.execute("SELECT COUNT(*) FROM sobrevivente")
+        resultado = resposta.fetchall()[0]
+        
+        if resultado == 0:
+            connection.execute("""INSERT INTO sobrevivente(nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""",
+            (sobrevivente.nome, sobrevivente.idade, sobrevivente.infectado, sobrevivente.habilidade))
+        
+    
+        connection.commit()
+
+    finally:
+        connection.close()
 
 
 if __name__ == "__main__":
