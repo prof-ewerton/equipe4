@@ -1,3 +1,5 @@
+from services.sobreviventeService import Services
+
 class Ui:
 
     def __init__(self):
@@ -42,6 +44,14 @@ class Ui:
             print("Cadastrar sobrevivente -> 1")
             
             resposta = input("O que deseja fazer? ")
+            
+            if resposta == 1:
+                nome = input("Digite o nome do sobrevivente a ser cadastrado: ")
+                idade = int(input("Digite a idade do sobrevivente a ser cadastrado: "))
+                habilidade = input("Digite a habilidade do sobrevivente a ser cadastrado: ")
+                
+                criar = services.create(nome, idade, habilidade)
+                print(f"Sobrevivente cadastrado! ID: {criar_id}")
         
     def menu_entity_two(self):
         print("\n===== TEMA DA EQUIPE =====")

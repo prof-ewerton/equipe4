@@ -1,4 +1,4 @@
-from database.connection import get_db_connection()
+from database.connection import get_db_connection
 from entities.sobrevivente import Sobrevivente
 
 class CRUDsobrevivente:
