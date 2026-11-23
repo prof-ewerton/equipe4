@@ -14,8 +14,16 @@ def install():
         
         if resultado == 0:
             connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
-            (navio.nome, navio.capacidade, navio.emViagem, navio.tipoNavio))
-        
+            ("sereia", 2000, True,"cargueiro"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("concha do mar", 300, False,"Passeio"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("amélia", 600, False,"Passeio"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("destruidor de ondas", 2000, True,"cargueiro"))
+            connection.execute("""INSERT INTO navio(nome, capacidade, emViagem, tipoNavio) VALUES (?, ?, ?, ?)""",
+            ("summer", 350, True,"Passeio"))
+            
     finally:
         connection.close()
         
@@ -27,14 +35,11 @@ def install():
         resultado = cursor.fetchall()[0]
         
         if resultado == 0:
-            connection.execute("""INSERT INTO sobrevivente(nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""",
-            (sobrevivente.nome, sobrevivente.idade, sobrevivente.infectado, sobrevivente.habilidade))
-            
-        connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Cruz", 19, False, "Tiro Rápido"))
-        connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Gustavo", 20, False, "Corrida Intensa"))
-        connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Leh", 20, False, "Hacker"))
-        connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Mariazinha", 19, False, "Surfar"))
-        connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Joaozinho", 30, False, "Carregamento Rápido"))
+            connection.execute("""INSERT INTO sobrevivente(nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Cruz", 19, False, "Tiro Rápido"))
+            connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Gustavo", 20, False, "Corrida Intensa"))
+            connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Leh", 20, False, "Hacker"))
+            connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Mariazinha", 19, False, "Surfar"))
+            connection.execute("""INSERT INTO sobrevivente (nome, idade, infectado, habilidade) VALUES (?, ?, ?, ?)""", ("Joaozinho", 30, False, "Carregamento Rápido"))
         
     
         connection.commit()
@@ -50,6 +55,12 @@ def install():
         if resultadoTesouro == 0:
             connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""",
             (tesouro.nome, tesouro.valor, tesouro.encontrado, tesouro.raridade))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de madeira', 500 , False , 'pouco raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de ferro', 600 , False , 'medio raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de cobre', 700 , False , 'bastante raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de ouro', 800 , False , 'muito raro'))
+        connection.execute("""INSERT INTO tesouro(nome, valor, encontrado, raridade) VALUES (?, ?, ?, ?)""", ('Bau de diamante', 900 , False , 'extremamente raro'))
+        
     
         connection.commit()
     finally:
