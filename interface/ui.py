@@ -1,10 +1,11 @@
+from services.serviceNavio import Services
 class Ui:
 
     def __init__(self):
 
         self.MENU_OPTIONS = [
             (1, "Sobrevivente", self.menu_entity_one),
-            (2, "Entidade Leh", self.menu_entity_two),
+            (2, "Navio", self.menu_entity_two),
             (3, "Entidade Gusta", self.menu_entity_three),
         ]
 
@@ -41,7 +42,50 @@ class Ui:
         
     def menu_entity_two(self):
         print("\n===== TEMA DA EQUIPE =====")
-        print("= tema do estudante ==")
+        print("= Navio ==")
+        nome = input("Digite o nome do Navio: ")
+        capacidade = int(input("Digite a capacidade do navio(KG): "))
+        tipoNavio = input("Digite o tipo do Navio: ")
+        
+        try:
+            navio = self.serviceNavio.create(nome, capacidade, tipoNavio)
+            print(f"CADASTRADO COM SUCESSO => ID = {navio.id}")
+            if navio.emViagem:
+                confirma = "SIM"
+            else:
+                confirma = "NÃO"
+            print(f"NOME: {navio.nome}// CAPACIDADE: {navio.capacidade} // TIPO: {navio.tipo} // EM VIAGEM? {confirma}")
+        
+        except:
+            raise ValueError("Ocorreu algum erro, tente novamente...")
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     def menu_entity_three(self):
         print("\n===== TEMA DA EQUIPE =====")
