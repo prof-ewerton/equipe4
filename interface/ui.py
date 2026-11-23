@@ -3,7 +3,9 @@ class Ui:
     def __init__(self):
 
         self.MENU_OPTIONS = [
-            (1, "Entity one", self.menu_entity_one),
+            (1, "Sobrevivente", self.menu_entity_one),
+            (2, "Entidade Leh", self.menu_entity_two),
+            (3, "Entidade Gusta", self.menu_entity_three),
         ]
 
     def show(self):
@@ -35,4 +37,12 @@ class Ui:
 
     def menu_entity_one(self):
         print("\n===== TEMA DA EQUIPE =====")
-        print("= Entidade do Estudante ==")
+        print("= tema do estudante ==")
+        
+    def menu_entity_two(self):
+        print("\n===== TEMA DA EQUIPE =====")
+        print("= tema do estudante ==")
+        
+    def menu_entity_three(self):
+        print("\n===== TEMA DA EQUIPE =====")
+        print("= tema do estudante ==")
