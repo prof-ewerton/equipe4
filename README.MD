@@ -1,5 +1,8 @@
 # **Requisitos da avaliação prática**
 
+## temas das entidades:
+### entidade sobrevivente nome (String) idade(int) infectado(boolean) e habilidade(string) - João
+
 ## **Primeiro dia**
 
 ### **Requisito 1 — Instalação e preparação do banco de dados**
