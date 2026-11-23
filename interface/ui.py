@@ -45,7 +45,7 @@ class Ui:
             resposta = input("O que deseja fazer? ")
         
     def menu_entity_two(self):
-        print("\n===== TEMA DA EQUIPE =====")
+        print("\n===== Naufrágio =====")
         print("= Navio ==")
         nome = input("Digite o nome do Navio: ")
         capacidade = int(input("Digite a capacidade do navio(KG): "))
