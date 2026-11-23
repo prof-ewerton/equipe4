@@ -37,11 +37,16 @@ class Ui:
 
     def menu_entity_one(self):
         print("\n===== Naufrágio =====")
-        print("= sobrevivente ==")
+        print("= Sobrevivente ==")
         while True:
             print("Cadastrar sobrevivente -> 1")
             
             resposta = input("O que deseja fazer? ")
+            
+            if resposta == 1:
+                nome = input("Selecione o nome do sobrevivente a ser cadastrado: ")
+                idade = input("Selecione a idade do sobrevivente a ser cadastrado: ")
+                habilidade = input("Selecione a habilidade do sobrevivente a ser cadastrado: ")
         
     def menu_entity_two(self):
         print("\n===== TEMA DA EQUIPE =====")
